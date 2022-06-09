@@ -1,0 +1,228 @@
+﻿
+@{
+    ViewBag.Title = "layout";
+}
+
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @*<link rel="stylesheet" href="~/Areas/css/Chung.css" type="text/css" />*@
+    @*<link href="~/Areas/css/forgotpass.css" rel="stylesheet" />
+    <link href="~/Areas/css/Home.css" rel="stylesheet" />
+    <link href="~/Areas/css/lienhe.css" rel="stylesheet" />
+    <link href="~/Areas/css/login.css" rel="stylesheet" />
+    <link href="~/Areas/css/register.css" rel="stylesheet" />
+    <link href="~/Areas/css/t_shirt.css" rel="stylesheet" />*@
+
+
+    <link href="~/Areas/css/add.cart.css" rel="stylesheet" />
+    <link href="~/Areas/css/chitiet.css" rel="stylesheet" />
+    <link href="~/Areas/css/Chung.css" rel="stylesheet" />
+    <link href="~/Areas/css/forgotpass.css" rel="stylesheet" />
+    <link href="~/Areas/css/Home.css" rel="stylesheet" />
+    <link href="~/Areas/css/lienhe.css" rel="stylesheet" />
+    <link href="~/Areas/css/register.css" rel="stylesheet" />
+    <link href="~/Areas/css/login.css" rel="stylesheet" />
+    <link href="~/Areas/css/t_shirt.css" rel="stylesheet" />
+    <link href="~/Areas/css/thanhtoan.css" rel="stylesheet" />
+    <link href="~/Areas/themify-icons-font/themify-icons/themify-icons.css" rel="stylesheet" />
+    <script src="~/Areas/jss/home.js"></script>
+    <script src="~/Areas/js/img.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="grid">
+                <div class="header-navbar">
+                    <div class="header-navbar-logo">
+                        <a href="~/User/Home/Index">
+                            <img src="~/Asset/Image/logo.jpg" alt="Logo Shop" class="header-navbar-img">
+                        </a>
+                    </div>
+
+                    <div class="header-search">
+                        <input type="text" name="search" placeholder="Tìm kiếm sản phẩm" class="header-search-input">
+                        <button class="header-search-btn " type="submit">
+                            <i class="header-search-btn-icon ti-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="header-navbar-info">
+                        <div class="header-navbar-help-user">
+                            <i class="ti-headphone-alt"></i>
+                            <ul class="header-navbar-help">
+                                <li style="cursor: default;">Hỗ trợ khách hàng</li>
+                                <li class="header-phone-number hover-primary-color">0989948814</li>
+                            </ul>
+                        </div>
+
+                        <div class="header-navbar-help-user">
+                            <i class="ti-user"></i>
+                            <ul class="header-navbar-user">
+
+                                @if (Session["UserName"] != null)
+                                {
+                                    <li><a style="color:red" class="hover-primary-color" href="javascript:void(0)">Tài khoản:@Session["UserName"]</a></li>
+                                    <li><a class="hover-primary-color" href="@Url.Action("Logout","Login")">Đăng xuất</a></li>
+                                }
+                                else
+                                {
+                                    <li><a class="hover-primary-color" href="~/User/Login/Index">Đăng nhập</a></li>
+
+                                    <li><a class="hover-primary-color" href="./Register.html">Đăng ký</a></li>
+                                    @*<li><a class="hover-primary-color" href="./Register.html">Đăng ký</a></li>*@
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-navbar-cart">
+                        <div class="header-cart-wrap">
+                            <a  href="~/User/Cart/Index" class="ti-shopping-cart"   style="color:black"></a>
+                            @*<i class="ti-shopping-cart"></i>*@
+                            <div class="header-cart-list">
+                                <div class="header-cart-nothing">
+                                    <p class="header-cart-nothing-msg">Không có sản phẩm nào</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="content">
+            @RenderBody()
+        </div>
+
+
+
+
+        <div class="footer">
+            <div class="footer-email">
+                <p class="footer-email-title">Đăng ký nhận tên</p>
+                <div class="footer-email-import">
+                    <input type="email" class="footer-email-text" required placeholder="Nhập địa chỉ email">
+                    <button class="btn-submit">Submit</button>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <div class="grid footer-info-flex">
+                    <div class="grid__column-4 footer-info-form">
+                        <p class="footer-info-title">Về Chúng Tôi</p>
+                        <ul class="footer-info-list">
+                            <li class="footer-info-item">HP - Sự lựa chọn của mọi Game Thủ</li>
+                            <li class="footer-info-item">
+                                <i class="footer-info-icon ti-location-pin"></i>
+                                Địa chỉ: 282 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội
+                            </li>
+                            <li class="footer-info-item">
+                                <i class="footer-info-icon ti-mobile"></i>
+                                Số điện thoại: <p class="hover-decoration" style="display: inline-block; margin: 0;"> 0989948814</p>
+                            </li>
+                            <li class="footer-info-item">
+                                <i class="footer-info-icon ti-email"></i>
+                                Email: <p class="hover-decoration" style="display: inline-block; margin: 0;">thenextlevelvn@gmail.com</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid__column-4 footer-info-form">
+                        <p class="footer-info-title">Chính Sách</p>
+                        <ul class="footer-info-list">
+                            <li class="footer-info-item">
+                                <a href="" class="footer-info-link hover-decoration" style="color: var(--white-color);">
+                                    Chính sách bán hàng
+                                </a>
+                            </li>
+                            <li class="footer-info-item">
+                                <a href="" class="footer-info-link hover-decoration" style="color: var(--white-color);">
+                                    Chính sách đổi trả
+                                </a>
+                            </li>
+                            <li class="footer-info-item">
+                                <a href="" class="footer-info-link hover-decoration" style="color: var(--white-color);">
+                                    Chính sách bảo mật
+                                </a>
+                            </li>
+                            <li class="footer-info-item">
+                                <a href="" class="footer-info-link hover-decoration" style="color: var(--white-color);">
+                                    Điều khoản dịch vụ
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="grid__column-4 footer-info-form">
+                        <p class="footer-info-title">Thông Tin</p>
+                        <ul class="footer-info-list">
+                            <li class="footer-info-item">
+                                <a href="" class="footer-info-link hover-decoration" style="color: var(--white-color);">
+                                    Hướng dẫn chọn size
+                                </a>
+                            </li>
+                            <li class="footer-info-item">
+                                <a href="" class="footer-info-link hover-decoration" style="color: var(--white-color);">
+                                    Hướng dẫn bảo quản
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid__column-4 footer-info-form">
+                        <p class="footer-info-title">Theo Dõi Chúng Tôi</p>
+                        <ul class="footer-info-list footer-list-icon">
+                            <li class="footer-info-item">
+                                <a href="https://www.facebook.com/thenextlevelvn" class="footer-info-link ">
+                                    <i class="footer-link-connect ti-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="footer-info-item">
+                                <a href="https://twitter.com/" class="footer-info-link ">
+                                    <i class="footer-link-connect ti-twitter-alt"></i>
+                                </a>
+                            </li>
+                            <li class="footer-info-item">
+                                <a href="https://www.pinterest.com/" class="footer-info-link ">
+                                    <i class="footer-link-connect ti-pinterest"></i>
+                                </a>
+                            </li>
+                            <li class="footer-info-item">
+                                <a href="https://www.instagram.com/thenextlevelnepal/" class="footer-info-link ">
+                                    <i class="footer-link-connect ti-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-license">
+                <div class="grid">
+                    <div class="footer-license-form">
+                        <p class="footer-license-text">Bản quyền thuộc về The Next Level |</p>
+                        <a href="https://www.haravan.com/?utm_campaign=poweredby&utm_medium=haravan&utm_source=onlinestore" class="footer-license-link"> Powered by Haravan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

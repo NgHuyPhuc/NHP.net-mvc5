@@ -1,0 +1,250 @@
+.pay-form{
+    margin-top: 48px;
+}
+
+.pay-grid{
+    display: flex;
+}
+
+.pay__form-1{
+    width: 60%;
+    border-right: 1px solid #ccc;
+    height: 100vh;
+}
+
+.pay__form-2{
+    width: 40%;
+    background-color: #fafafa;
+}
+
+.pay__form-name-shop{
+    font-size: 2.4rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.pay__form-cart,
+.pay__form-icon-right,
+.pay__form-mini-title{
+    margin-top: 24px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.pay__form-nomal-title{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.pay__form-questtion{
+    font-size: 1.3rem;
+    color: #777;
+    cursor: default;
+}
+
+.pay__form-login{
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Input */
+.pay__form-info{
+    margin: 24px 24px 0 0;
+}
+
+.pay__form-item{
+    padding: 12px 12px;
+    font-size: 1.4rem;
+    outline-color: var(--primary-color) ;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.pay__form-contact{
+    margin: 16px 0;
+    display: flex;
+}
+
+.pay__form-emai{
+    width: 70%;
+}
+
+.pay__form-sdt{
+    width: 30%;
+    margin-left: 12px;
+}
+
+/* Ship */
+.pay__shipping-method{
+    margin-top: 36px;
+}
+
+.pay__shipping-method h3{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.pay__shipping-content{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 24px;
+    font-size: 1.2rem;
+    color: #888;
+    border: 1px solid #ccc;
+    padding: 12px ;
+    border-radius: 6px;
+    cursor: default;
+}
+
+.pay__ship{
+    display: flex;
+    align-items: center;
+}
+
+.pay__shipping-check{
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+/* Thanh toán */
+#pay__btn-pay{
+    display: flex;
+    margin: 30px 24px 0 0;
+    padding: 12px 24px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-size: 1.4rem;
+}
+
+#pay__btn-pay:hover{
+    opacity: 0.8;
+}
+
+/* form 2 */
+.pay__form-list-sp{
+    padding: 0;
+    width: 100%;
+}
+
+.pay__form-item-sp{
+    display: flex;
+    margin: 18px 18px 0 30px;
+}
+
+.pay__form-item-sp:last-child{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 24px ;
+}
+
+.pay__form-item-img{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.pay__form-item-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay__form-item-info div{
+    align-items: center;
+}
+
+.pay__form-item-name{
+    font-size: 1.3rem;
+    color: var(--text-color);
+    line-height: 1.3rem;
+    height: 2.6rem;
+    overflow: hidden;
+    margin: 8px 0 12px 12px;
+}
+
+.pay__form-item-price{
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-right: 8px;
+}
+
+.pay__form-item-classify{
+    font-size: 1rem;
+    margin: 8px 0 12px 12px;
+    color: #999;
+ }
+
+ /* Mã giảm giá */
+ .pay__form-discount{
+     margin: 24px 0 0 30px;
+     border-bottom: 1px solid #ccc;
+     padding-bottom: 24px ;
+     margin-right: 18px;
+ }
+
+ .pay__form-discout-code{
+     width: 70%;
+     font-size: 1.4rem;
+     padding: 12px 8px;
+     border:1px solid #ccc;
+     outline-color: var(--primary-color);
+    border-radius: 6px;
+ }
+
+ .pay__form-discout-done{
+    margin-left: 14px;
+    padding: 12px 14px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pay__form-discout-done:hover{
+    opacity: 0.8;
+}
+
+.pay__form-cost{
+    margin: 24px 0 0 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 24px ;
+    margin-right: 18px;
+}
+
+.pay__form-money{
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin:0 18px 18px 0;
+}
+
+.pay__form-cost-tele{
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin:0 18px 0 0;
+}
+
+.pay__form-price-closing{
+    margin: 24px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    color: var(--text-color-color);
+}

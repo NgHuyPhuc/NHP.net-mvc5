@@ -1,0 +1,230 @@
+﻿@using wnct2.Models.Framework
+
+@model List<itemcart>
+@{
+    ViewBag.Title = "CheckOut";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<div class="header-menu float-clear" style="height: 54px; align-items: center;">
+    <div class="grid">
+        <div class="header-menu-main">
+            <ul class="header-menu-list">
+                <li class="header-menu-item">
+                    <a href="~/User/Home/Index" class="header-menu-item-link" style="padding: 15px 12px 20px;">Trang chủ</a>
+                </li>
+                <li class="header-menu-item menu-item-main">
+                    <a href="~/User/Product/Index" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                        Sản phẩm
+                        <i class="ti-angle-down">
+
+                        </i>
+                    </a>
+                    <ul class="menu-list-item" style="z-index: 2;">
+                        <li><a href="~/User/Product/Index" style="color:#333;">T-Shirt</a></li>
+                        <li><a href="~/User/Product/Index" style="color:#333;">Áo dài tay</a></li>
+                        <li><a href="~/User/Product/Index" style="color:#333;">Sweater</a></li>
+                        <li><a href="~/User/Product/Index" style="color:#333;">Hoodie</a></li>
+                    </ul>
+                </li>
+                <li class="header-menu-item menu-item-main">
+                    <a href="" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                        Bộ sưu tập
+                        <i class="ti-angle-down"></i>
+                    </a>
+                    <ul class="menu-list-item ">
+                        <li><a href="./wibu.html" style="color:#333;">Wibu</a></li>
+                        <li><a href="./pokemon.html" style="color:#333;">Pokemon</a></li>
+                        <li><a href="./cyberpunk.html" style="color:#333;">Cyberpunk 2077</a></li>
+                        <li><a href="./lol.html" style="color:#333;">LoL</a></li>
+                    </ul>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./sale.html" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                        Random Sale
+                        <i class="ti-shortcode"></i>
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./lienhe.html" class="header-menu-item-link" style="padding: 15px 12px 20px;">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="header-row">
+    <div class="grid">
+        <ul class="header-row-list">
+            <li class="header-row-item ">
+                <a href="./Home.html" class="header-row-link hover-primary-color">
+                    Trang chủ
+                </a>
+            </li>
+            <li class="header-row-item ">
+                <a href="./Login.html" class="header-row-link hover-primary-color">
+                    / Tài khoản
+                </a>
+            </li>
+            <li class="header-row-item">
+                / Đăng nhập /
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="contact-backgr">
+    <div class="grid">
+        <div class="content-contact-form">
+            <h2 class="content-contact-title">Thanh toán</h2>
+            <div class="pay-form ">
+                <div class="grid pay-grid">
+                    <div class="pay__form-1">
+                        <h2 class="pay__form-name-shop">Hoàn Phúc Shop</h2>
+                        <div class="pay__form-breadcrumb">
+                            <span class="pay__form-cart hover-primary-color">Giỏ hàng</span>
+                            <i class="pay__form-icon-right ti-angle-right"></i>
+                            <span class="pay__form-mini-title">Thông tin giao hàng</span>
+                        </div>
+                        <h3 class="pay__form-nomal-title">Thông tin giao hàng</h3>
+                        <div class="pay__form-questtion-login">
+                            <span class="pay__form-questtion">Bạn đã có tài khoản?</span>
+                            <a href="./Login.html" class="pay__form-login">Đăng nhập</a>
+                        </div>
+
+                        <div class="pay__form-info">
+                            <input type="text" class="pay__form-item" placeholder="Họ và tên">
+                            <div class="pay__form-contact">
+                                <input type="email" class="pay__form-item pay__form-email" placeholder="Email">
+                                <input type="text" class="pay__form-item pay__form-sdt" placeholder="Số điện thoại">
+                            </div>
+                            <input type="text" class="pay__form-item" placeholder="Địa chỉ">
+                        </div>
+
+
+
+                        <div class="pay__shipping-method">
+                            <h3>Phương thức vận chuyển</h3>
+                            <div class="pay__shipping-content">
+                                <div class="pay__ship">
+                                    <div class="pay__shipping-check"></div>
+                                    <div class="pay__shipping-method-delivery">Giao hàng tận nơi (Toàn quốc)</div>
+                                </div>
+                                <span class="pay__ship-price">30.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="pay__shipping-method">
+                            <h3>Phương thức thanh toán</h3>
+                            <div class="pay__shipping-content">
+                                <div class="pay__ship">
+                                    <div class="pay__shipping-check"></div>
+                                    <div class="pay__shipping-method-delivery">Thanh toán khi giao hàng (COD)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thanh toán -->
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                            <button type="submit" value="" id="pay__btn-pay">Thực hiện thanh toán</button>
+                            <script language="javascript">
+                                var button = document.getElementById("pay__btn-pay");
+                                button.onclick = function () {
+                                    swal("Xác nhận!", "Thanh toán thành công!");
+                                }
+                            </script>
+                        }
+                        </div>
+
+                    <div class="pay__form-2">
+                        @foreach (var item in Model)
+                        {
+                            <ul class="pay__form-list-sp">
+                                <li class="pay__form-item-sp">
+                                    <img src="~/Asset/Image/@item.anh" alt="Áo thun dài tay Ayanami Rei - Neon Genesis Evangelion" class="pay__form-item-img">
+                                    <div class="pay__form-item-info">
+                                        <div>
+                                            <p class="pay__form-item-name">@item.tenhh </p>
+                                            <span class="pay__form-item-classify">Phân loại hàng: @item.type</span>
+                                        </div>
+                                        <p class="pay__form-item-price">@item.donggia.ToString("#,##") đ</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        }
+                        @*<ul class="pay__form-list-sp">
+                                <li class="pay__form-item-sp">
+                                    <img src="~/Asset/Image/aotaydai1.jpg" alt="Áo thun dài tay Ayanami Rei - Neon Genesis Evangelion" class="pay__form-item-img">
+                                    <div class="pay__form-item-info">
+                                        <div>
+                                            <p class="pay__form-item-name">Áo thun dài tay Ayanami Rei - Neon Genesis Evangelion </p>
+                                            <span class="pay__form-item-classify">Phân loại hàng: Áo tay dài</span>
+                                        </div>
+                                        <p class="pay__form-item-price">280.000đ</p>
+                                    </div>
+                                </li>
+
+                                <li class="pay__form-item-sp">
+                                    <img src="~/Asset/Image/aotaydai2.jpg" alt="Áo thun dài tay Pikachu" class="pay__form-item-img">
+                                    <div class="pay__form-item-info">
+                                        <div>
+                                            <p class="pay__form-item-name">Áo thun dài tayPikachu </p>
+                                            <span class="pay__form-item-classify">Phân loại hàng: Áo tay dài</span>
+                                        </div>
+                                        <p class="pay__form-item-price">280.000đ</p>
+                                    </div>
+                                </li>
+                            </ul>*@
+
+                        <div class="pay__form-discount">
+                            <input type="text" placeholder="Mã giảm giá" name="" class="pay__form-discout-code" id="">
+                            <button class="pay__form-discout-done">Sử dụng</button>
+                        </div>
+
+                        <div class="pay__form-cost">
+                            <div class="pay__form-money">
+                                <span class="pay__form-cost-expected">Tạm tính</span>
+                                <span class="pay__form-cost-expected-price">@ViewBag.tt đ</span>
+                            </div>
+
+                            <div class="pay__form-cost-tele">
+                                <span class="pay__form-cost-fee">Phí vận chuyển</span>
+                                <span class="pay__form-cost-transport-fee">30.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="pay__form-price-closing">
+                            <span class="pay__form-total">Tổng cộng</span>
+                            <span class="pay__form-total-price">@ViewBag.tt2 đ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="backtop">
+    <i class="ti-angle-up backtop-icon"></i>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop()) {
+                $('#backtop').fadeIn();
+            } else {
+                $('#backtop').fadeOut();
+            }
+        });
+        $('#backtop').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        });
+    });
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

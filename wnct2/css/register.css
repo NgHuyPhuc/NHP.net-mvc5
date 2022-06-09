@@ -1,0 +1,21 @@
+.content-contact{
+
+}
+
+.contact-backgr{
+  
+}
+
+.content-contact-form{
+    padding: 16px 0 32px 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 2px #eee;
+}
+
+.register-title{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+    text-align: center;
+}

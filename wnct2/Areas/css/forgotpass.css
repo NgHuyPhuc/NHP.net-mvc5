@@ -1,0 +1,31 @@
+.forgot-pass-form{
+    width: 50%;
+    transform: translateX(50%);
+    text-align: center;
+    margin-top: 26px;
+}
+
+.content-contact-title{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.forgot-pass-title{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.forgot-pass-notification{
+    font-size: 1.4rem;
+    color: #999eac;
+}
+
+.forgot-pass-return{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+}

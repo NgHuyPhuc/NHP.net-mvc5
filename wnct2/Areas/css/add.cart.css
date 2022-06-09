@@ -1,0 +1,130 @@
+.add__cart-form-product{
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 0 6px 2px #ccc;
+    animation: modalFadein ease-in 0.5s;
+    padding-bottom: 20px;
+}
+
+.add_cart-form-separate{
+    display: flex;
+}
+
+.add__cart-1{
+    width: 70%;
+    border-right: 1px solid #ccc;
+    padding-right: 14px;
+}
+
+.add__cart-2{
+    width: 30%;
+}
+
+.add__cart-form-title{
+    padding: 20px;
+    font-size: 2.4rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.add__form-list{
+    padding-left: 20px;
+}
+
+.add__cart-item{
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #efefef;
+}
+
+.add__cart-img-name{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add__cart-item-delete{
+    font-size: 1.6rem;
+    color: #c3c3c3;
+    margin-right: 12px;
+}
+
+.add__cart-item-delete:hover{
+    color: #ff5722;
+}
+
+.add__cart-item-img{
+    width: 100px;
+    height: 100px;
+    margin: 0 14px;
+}
+
+.add__cart-item-name{
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.add__cart-price-quantily{
+    display: flex;
+    align-items: center;
+}
+
+.add__cart-price{
+    font-size: 1.6rem;
+    color: #ff5722;
+    font-weight: 600;
+    margin-right: 16px;
+}
+
+/* Cart form 2 */
+.add__cart-total-money{
+    padding:0 20px;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add__cart-total-text{
+}
+
+.add__cart-total-price{
+    color: #ff5722;
+    font-weight: 600;
+}
+
+.add__cart-payment{
+    display: flex;
+    justify-content: center;
+    padding: 8px 14px;
+    margin: 30px 20px 0;
+    background-color: #ff5722;
+    text-decoration: none;
+    color: var(--white-color);
+    border-radius: 6px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.add__cart-payment:hover{
+    opacity: 0.8;
+}
+
+.add__cart-back-home{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.add__cart-back{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #7c848b;
+}
+
+.add__cart-back:hover .add__cart-back-icon{
+    margin-left: -6px;
+    transition: 0.4s;
+}
+

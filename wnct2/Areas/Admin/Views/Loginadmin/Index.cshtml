@@ -1,0 +1,76 @@
+﻿@model wnct2.Areas.Admin.Models.DTO.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSPINIA | Login</title>
+    <link href="~/Areas/Asset/Adminlogin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Areas/Asset/Adminlogin/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="~/Areas/Asset/Adminlogin/css/animate.css" rel="stylesheet">
+    <link href="~/Areas/Asset/Adminlogin/css/style.css" rel="stylesheet">
+
+</head>
+<body class="gray-bg">
+    <div class="loginColumns animated fadeInDown">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="font-bold">Welcome to Shop admin</h2>
+
+                <p>
+                    Chúng tôi rất hân hạnh khi quý khách sử dụng dịch vụ của Shop admin.
+                </p>
+
+                <p>
+                    Vui lòng đăng nhập để có thể tiến hành giao dịch .
+                </p>
+
+                <p>
+                    Nếu quý khách chưa có tài khoản thì quý khách có thể đăng kí với chúng tôi.
+                </p>
+
+                <p>
+                    Việc đăng nhập sẽ không mất nhiều thời gian với mọi người nhưng có thể giúp chúng tôi xử lý rất nhiều, xin trân trọng cảm ơn!
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, null, new { @class = "text-danger" })
+                        
+                        <div class="form-group">
+                            @Html.TextBoxFor(x => x.TaiKhoan, htmlAttributes: new { @class = "form-control", @placeholder = "Tài khoản" })
+                            @Html.ValidationMessageFor(x => x.TaiKhoan, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(x => x.MatKhau, htmlAttributes: new { @class = "form-control", @placeholder = "Mật khẩu", @type = "password" })
+                            @Html.ValidationMessageFor(x => x.MatKhau, "", new { @class = "text-danger" })
+                        </div>
+                        <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+                        <p class="text-muted text-center">
+                            <small>Do not have an account?</small>
+                        </p>
+                        <a class="btn btn-sm btn-white btn-block" href="../../User/Register/Create">Create an account</a>
+                    }
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                Copyright Example Company
+            </div>
+            <div class="col-md-6 text-right">
+                <small>© 2014-2015</small>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

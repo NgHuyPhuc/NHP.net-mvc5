@@ -1,0 +1,138 @@
+﻿@model wnct2.Areas.User.Models.DTO.UserModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="header-menu float-clear" style="height: 54px; align-items: center;">
+    <div class="grid">
+        <div class="header-menu-main">
+            <ul class="header-menu-list">
+                <li class="header-menu-item">
+                    <a href="~/User/Home/Index" class="header-menu-item-link" style="padding: 15px 12px 20px;">Trang chủ</a>
+                </li>
+                <li class="header-menu-item menu-item-main">
+                    <a href="~/User/Product/Index" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                        Sản phẩm
+                        <i class="ti-angle-down">
+                        </i>
+                    </a>
+                    <ul class="menu-list-item">
+                        <li><a href="~/User/Product/Index">T-Shirt</a></li>
+                        <li><a href="~/User/Product/Index">Áo dài tay</a></li>
+                        <li><a href="~/User/Product/Index">Sweater</a></li>
+                        <li><a href="~/User/Product/Index">Hoodie</a></li>
+                    </ul>
+                </li>
+                <li class="header-menu-item menu-item-main">
+                    <a href="" class="header-menu-item-link " style="padding: 15px 12px 20px;">
+                        Bộ sưu tập
+                        <i class="ti-angle-down"></i>
+                    </a>
+                    <ul class="menu-list-item ">
+                        <li><a href="./wibu.html">Wibu</a></li>
+                        <li><a href="./pokemon.html">Pokemon</a></li>
+                        <li><a href="./cyberpunk.html">Cyberpunk 2077</a></li>
+                        <li><a href="./lol.html">LoL</a></li>
+                    </ul>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./sale.html" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                        Random Sale
+                        <i class="ti-shortcode"></i>
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./lienhe.html" class="header-menu-item-link" style="padding: 15px 12px 20px;">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="header-row">
+    <div class="grid">
+        <ul class="header-row-list">
+            <li class="header-row-item ">
+                <a href="~/User/Home/Index" class="header-row-link hover-primary-color">
+                    Trang chủ
+                </a>
+            </li>
+            <li class="header-row-item ">
+                <a href="./Login.html" class="header-row-link hover-primary-color">
+                    / Tài khoản
+                </a>
+            </li>
+            <li class="header-row-item">
+                / Đăng nhập /
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="contact-backgr">
+    <div class="grid">
+        <div class="content-contact-form">
+            <h2 class="content-contact-title">Đăng nhập tài khoản</h2>
+            <p class="content-contact-mini-title">
+                Bạn chưa có tài khoản
+                <a href="./Register.html" class="hover-decoration hover-primary-color">
+                    Đăng ký tại đây
+                </a>
+            </p>
+            @using (Html.BeginForm())
+            {
+                @*<div>
+                @Html.ValidationSummary(true)
+            </div>
+            <div class="content-form-login">
+                <div class="form-login-title">
+                    <p class="form-login-text">Email <span>*</span></p>
+                    <input name="user" type="email" placeholder="Email" required class="form-login-input">
+                </div>
+
+                <div class="form-login-title">
+                    <p class="form-login-text">Mật khẩu <span>*</span></p>
+                    <input name="pass" type="password" placeholder="Mật khẩu" required class="form-login-input">
+                </div>
+            </div>
+            <div class="forgot-password">
+                Quên mật khẩu? Nhấn vào <a href="./forgotpass.html">đây </a>
+            </div>
+
+            <div class="login">
+                <div class="login-text">
+                    <input type="submit" value="Login" />
+                </div>
+            </div>*@
+
+
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, null, new { @class = "text-danger" })
+                <div class="form-login-title">
+                    <p class="form-login-text">Tài khoản <span>*</span></p>
+                    @Html.TextBoxFor(x => x.TaiKhoan, htmlAttributes: new { @class = "form-login-text", @placeholder = "Tài khoản" })
+                    @Html.ValidationMessageFor(x => x.TaiKhoan, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-login-title">
+                    <p class="form-login-text">Mật khẩu <span>*</span></p>
+                    @Html.TextBoxFor(x => x.MatKhau, htmlAttributes: new { @class = "form-login-text", @placeholder = "Mật khẩu", @type = "password" })
+                    @Html.ValidationMessageFor(x => x.MatKhau, "", new { @class = "text-danger" })
+                </div>
+                <div class="login">
+                    @*<div class="login-text">Đăng Nhập</div>*@
+                    <button type="submit" class="login-text">Login</button>
+                </div>
+                
+                <p class="text-muted text-center">
+                    <small>Do not have an account?</small>
+                </p>
+                <a class="btn btn-sm btn-white btn-block" href="../../User/Register/Create">Create an account</a>
+            }
+
+        </div>
+    </div>
+</div>
+
+

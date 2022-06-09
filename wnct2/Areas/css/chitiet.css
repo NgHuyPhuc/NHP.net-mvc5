@@ -1,0 +1,41 @@
+.details__form-product{
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 0 6px 2px #ccc;
+    animation: modalFadein ease-in 0.5s;
+}
+
+.details__form-title{
+    font-size: 2rem;
+    padding: 10px 20px;
+    font-weight: 400;
+}
+
+.description{
+    margin-top: 40px;
+}
+
+.description__form{
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 0 6px 2px #ccc;
+}
+
+.description__form-title{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 14px 20px;
+    margin: 0;
+}
+
+.description__form-desc{
+}
+
+.description__form-text{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0;
+    padding: 0 20px;
+}

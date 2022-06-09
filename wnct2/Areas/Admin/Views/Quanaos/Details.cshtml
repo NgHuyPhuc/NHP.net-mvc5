@@ -1,0 +1,76 @@
+﻿@model wnct2.Models.Framework.Quanao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Quanao</h4>
+    <hr />
+    <dl class="dl-horizontal" style="width: 1000px; min-height: 1200px; margin-left: 300px; background-color: white; padding: 20px; border-radius: 20px">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenhh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenhh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DongGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DongGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Producer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hsd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hsd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Anh)
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.Anh)*@
+            <img src="~/Areas/Asset/FileUpload/@Html.DisplayFor(model => model.Anh)" style="height:120px;" />
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Mahh }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

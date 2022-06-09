@@ -1,0 +1,58 @@
+﻿@model IEnumerable<wnct2.Models.Framework.NguoiDung>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="col-lg-6" style="margin-left:248px;margin-top:-30px">
+
+    <div class="card" style="width: 1245px; min-height: 1200px;">
+        <p style="margin-left:1100px;margin-top:20px">
+            @Html.ActionLink("CREATE NEW", "Create")
+        </p>
+        <div class="card-body">
+            <div class="card-title">
+                <h4>Table Categories</h4>
+            </div>
+            <div class="table-responsive">
+
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.MatKhau)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.accRole)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MatKhau)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.accRole)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.TaiKhoan }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.TaiKhoan }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.TaiKhoan })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

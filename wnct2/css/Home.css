@@ -1,0 +1,555 @@
+.header{
+    height: 94px;
+}
+
+.header-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+}
+
+.header-navbar-logo{
+    display: flex;
+    align-content: center;
+}
+
+.header-navbar-img{
+    max-width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    border: 4px solid #019abd;
+    cursor: pointer;
+}
+
+.header-navbar-img:hover{
+    opacity: 0.8;
+}
+
+.header-search{
+    /* background-color: #eeeeee9f; */
+    height: 40px;
+    flex: 1;
+    margin-left: 16px;
+    border-radius: 20px;
+    position: relative;
+    border:3px solid #ccc;
+
+}
+
+.header-search-input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 1.4rem;
+    padding:0 16px;
+    border:none;
+    border-radius: 20px;
+    color: #000;
+    border-color: #d0ecf3;
+}
+
+.header-search-btn{
+    position: absolute;
+    right: 0;
+    background-color: var(--primary-color);
+    border: none;
+    height: 32px;
+    top: 1px;
+    right: 1px;
+    border-radius: 20px;
+    padding: 0 14px;
+    cursor: pointer;
+}
+
+.header-search-btn:hover{
+    opacity: 0.8;
+}
+
+.header-search-btn-icon{
+    font-size: 1.4rem;
+    color:var(--white-color);
+}
+
+.header-navbar-info{
+    display: flex;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.header-navbar-help-user{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    text-align: start;
+}
+
+.header-navbar-info .header-phone-number{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-navbar-help-user i{
+    font-size: 2rem;
+    margin-right: 8px;
+}
+
+.header-navbar-help-user ul{
+    padding-left: 10px;
+}
+
+.header-navbar-help-user li{
+    list-style: none;
+}
+
+.header-navbar-help-user a{
+    text-decoration: none;
+    color: #000;
+}
+
+.header-navbar-cart{
+    width: 80px;
+    font-size: 2.2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header-cart-wrap{
+    padding:  12px 8px;
+    position: relative;
+}
+
+.header-cart-list{
+    position: absolute;
+    width: 400px;
+    top: calc(100% + 4px);
+    right: 1px;
+    background: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 2px 10px #ccc;
+    animation: fakeIn linear 0.2s;
+    cursor: default;
+    display: none;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.header-cart-wrap:hover .header-cart-list{
+    display: block;
+}
+
+.header-cart-list::after{
+    content: "";
+    position: absolute;
+    top: -28px;
+    right: 20px;
+    border-width: 16px 20px ;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header-cart-nothing{
+    padding: 20px 0;
+}
+
+.header-cart-nothing-msg{
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-top: 14px;
+    /* display: none; */
+}
+
+/* Menu */
+.header-menu{
+    margin-top: 14px ;
+    display: flex;
+    background-color: var(--primary-color);
+}
+
+.header-menu-main{
+    height: 36px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-left: -30px;
+    
+}
+
+.header-menu-main li{
+    float: left;
+    list-style: none;
+    font-size:1.4rem ;   
+}
+
+.header-menu-main a{
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 500;
+    padding:  20px 12px;
+}
+
+.header-menu-item-link:hover {
+    background-color: #018aa9;
+    color: var(--white-color);
+}
+
+.header-menu-list .header-menu-item i{
+    font-size: 1.3rem;  
+    margin-left: 6px;
+}
+
+/* content */
+.content{
+
+}
+
+.slide-form{
+    padding-top: 30px;
+}
+
+.slide-link img{
+    border-radius: 10px;
+}
+
+.slide-icon{
+    font-size: 24px;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    opacity: 0.8;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.slide-icon:hover{
+    color: var(--text-color);
+    background-color: var(--white-color);
+    opacity: 1;
+}
+
+/* Content type */
+.content-type{
+    margin-top: 60px;
+}
+
+.content-type-item{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.content-type-item-link{
+    padding-right: -20px;
+    padding-left: -20px;
+}
+
+.content-type-item-img{
+    width: 118px;
+    height: 118px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.content-type-item-img:hover{
+    border: 4px solid var(--primary-color);
+    animation: spin 4s linear infinite;
+}
+
+.content-type-item-text{
+    margin-top: 16px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* New shirt */
+.new-shirt{
+    margin: 30px 0;
+}
+
+.new-shirt-content{
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.new-shirt-list{
+    margin-top: 30px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+
+}
+
+.new-shirt-list:hover .new-shirt-item-img::before {
+    transform-origin: center bottom;
+    transform: scaleY(1);
+}
+
+
+.new-shirt-list:hover{
+    box-shadow: 0 0 4px 1px rgb(230, 226, 226);
+    overflow: hidden;
+}
+
+.new-shirt-list:hover .new-shirt-search{
+    display: block;
+    transform: translateY(-50%) translateX(-50%);    
+}
+
+.new-shirt-text{
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.new-shirt-item{
+    text-decoration: none;
+    
+}
+
+.new-shirt-item-img{
+    position: relative;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    z-index: 1;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    overflow: hidden;
+}
+
+.new-shirt-item-img::before{
+    content: "";
+    z-index: -1;
+    margin-top: 4px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc;
+    opacity: 0.5;
+    transform-origin: center top;
+    transform: scaleY(0);
+    transition: transform 0.25s ease-in-out;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.new-shirt-search{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: var(--primary-color);
+    text-align: center;
+    display: none;
+}
+
+.new-shirt-item-name{
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 700;
+    line-height: 1.4rem;
+    height: 1.4rem;
+    margin: 10px 10px 10px 0;
+    overflow: hidden;
+    display: block;
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.new-shirt-item__price{
+    background-color: var(--white-color);
+    font-size: 1.3rem;
+    margin-left: 30px;
+    margin-bottom: 16px;
+}
+
+.new-shirt-item__price-current{
+    color: red;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.new-shirt-item__price-old{
+    color: var(--text-color);
+    text-decoration: line-through;
+    font-size: 1.1rem;
+}
+
+/* Banner */
+.content-banner{
+    padding: 30px;
+}
+
+.content-banner-img{
+    padding-top: 20%;
+    background: url('/asset/img/banner.jpg') top center / contain no-repeat;
+    cursor: pointer;
+}
+
+/* Random Sale */
+.random-sale{
+    margin-top: 25px;
+    border: 12px solid #fcce5f;
+    border-radius:10px ;
+}
+
+.random-sale-padding{
+    padding:0 20px;
+    margin-top: 20px;
+}
+
+.random-sale-title{
+    display: flex;
+}
+
+.random-sale-big-text{
+    margin-right: 16px;
+    font-size: 2.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.random-sale-small-text{
+    margin: 0;
+    font-size: 1.2rem;
+    color:rgb(233, 65, 65);
+}
+
+/* Wibu shirt */
+.wibu-shirt{
+    margin: 70px 0;
+}
+
+.wibu-shirt-text{
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 2.4rem;
+}
+.wibu-shirt-list{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.wibu-banner{
+    float: right;
+    background: var(--white-color);
+}
+
+.wibu-banner-img{
+    height: 320px;
+    width: 100%;
+}
+
+/* Game Shirt */
+.game-shirt{
+    margin: 70px 0;
+}
+
+.game-shirt-list{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.game-banner{
+    float: right;
+    background: var(--white-color);
+    width: 460px;
+
+}
+
+.game-banner-link{
+
+}
+
+.game-banner-img{
+    height: 320px;
+    width: 100%;
+}
+
+/* Banner Home */
+.banner-home{
+    margin: 70px 0;
+    
+}
+
+.banner-home-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-home-item{
+    margin: 0 8px;
+}
+
+.banner-home-img{
+    width: 100%;
+}
+
+/* HP shirt */
+.Hp-shirt-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Hp-shirt-title-list{
+    display: flex;
+    list-style: none;
+    color: var(--text-color);
+}
+
+.Hp-shirt-item{
+    margin: 0 8px;
+}
+
+.Hp-shirt-item-link{
+    padding: 8px 12px;
+    background-color: #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--text-color);
+}
+
+.Hp-shirt-item-link:hover{
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.Hp-shirt-item-active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+
+
+
+

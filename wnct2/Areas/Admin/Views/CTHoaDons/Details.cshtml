@@ -1,0 +1,42 @@
+﻿@model wnct2.Models.Framework.CTHoaDon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CTHoaDon</h4>
+    <hr />
+    <dl class="dl-horizontal" style="width: 1000px; min-height: 1200px; margin-left: 300px; background-color: white; padding: 20px; border-radius: 20px">
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoaDon.MaNV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoaDon.MaNV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quanao.Tenhh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quanao.Tenhh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

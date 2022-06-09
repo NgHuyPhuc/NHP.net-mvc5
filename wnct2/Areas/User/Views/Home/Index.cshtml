@@ -1,0 +1,507 @@
+﻿@* home *@
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<div class="header-menu float-clear" style="height: 54px; align-items: center;">
+    <div class="grid">
+        <div class="header-menu-main">
+            <ul class="header-menu-list">
+                <li class="header-menu-item">
+                    <a href="~/User/Home/Index" class="header-menu-item-link" style="padding: 15px 12px 20px;">Trang chủ</a>
+                </li>
+                <li class="header-menu-item menu-item-main">
+                    <a href="~/User/Product/Index" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                        Sản phẩm
+                        <i class="ti-angle-down">
+
+                        </i>
+                    </a>
+                    <ul class="menu-list-item" style="z-index: 2;">
+                        <li><a href="~/User/Product/Index" style="color:#333;">T-Shirt</a></li>
+                        <li><a href="~/User/Product/Index" style="color:#333;">Áo dài tay</a></li>
+                        <li><a href="~/User/Product/Index" style="color:#333;">Sweater</a></li>
+                        <li><a href="~/User/Product/Index" style="color:#333;">Hoodie</a></li>
+                    </ul>
+                </li>
+                <li class="header-menu-item menu-item-main">
+                    <a href="" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                        Bộ sưu tập
+                        <i class="ti-angle-down"></i>
+                    </a>
+                    <ul class="menu-list-item ">
+                        <li><a href="./wibu.html" style="color:#333;">Wibu</a></li>
+                        <li><a href="./pokemon.html" style="color:#333;">Pokemon</a></li>
+                        <li><a href="./cyberpunk.html" style="color:#333;">Cyberpunk 2077</a></li>
+                        <li><a href="./lol.html" style="color:#333;">LoL</a></li>
+                    </ul>
+                </li>
+                <li class="header-menu-item">
+                    <a href="" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                        Random Sale
+                        <i class="ti-shortcode"></i>
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./lienhe.html" class="header-menu-item-link" style="padding: 15px 12px 20px;">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="grid slide-form">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="" class="slide-link">
+                    <img src="~/Asset/Image/slider_3.jpg" class="d-block w-100" alt="Wibu" />
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="" class="slide-link">
+                    <img src="~/asset/image/slider_nhen.jpg" class="d-block w-100" alt="nhện" />
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="" class="slide-link">
+                    <img src="~/asset/image/slider_cbpunk.jpg" class="d-block w-100" alt="cyberpunk" />
+                </a>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class=" ti-angle-left slide-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class=" ti-angle-right slide-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Content Type -->
+    <div class="content-type">
+        <ul class="content-type-list">
+            <li class="content-type-item">
+                <a href="./wibu.html" class="content-type-item-link">
+                    <img src="~/Asset/Image/brand_1.jpg" alt="Wibu" class="content-type-item-img">
+                </a>
+                <p class="content-type-item-text hover-primary-color">Wibu</p>
+            </li>
+            <li class="content-type-item">
+                <a href="./cyberpunk.html" class="content-type-item-link">
+                    <img src="~/Asset/Image/brand_2.jpg" alt="Cyberpunk 2077" class="content-type-item-img">
+                </a>
+                <p class="content-type-item-text hover-primary-color">Cyberpunk 2077</p>
+            </li>
+            <li class="content-type-item">
+                <a href="./lol.html" class="content-type-item-link">
+                    <img src="~/Asset/Image/brand_3.jpg" alt="LoL" class="content-type-item-img">
+                </a>
+                <p class="content-type-item-text hover-primary-color">LoL</p>
+            </li>
+            <li class="content-type-item">
+                <a href="" class="content-type-item-link">
+                    <img src="~/Asset/Image/brand_4.jpg" alt="Dark Souls" class="content-type-item-img">
+                </a>
+                <p class="content-type-item-text hover-primary-color">Dark Souls</p>
+            </li>
+            <li class="content-type-item">
+                <a href="" class="content-type-item-link">
+                    <img src="~/Asset/Image/brand_5.jpg" alt="The Witcher" class="content-type-item-img">
+                </a>
+                <p class="content-type-item-text hover-primary-color">The Witcher</p>
+            </li>
+            <li class="content-type-item">
+                <a href="" class="content-type-item-link">
+                    <img src="~/Asset/Image/brand_6.jpg" alt="Pokémon" class="content-type-item-img">
+                </a>
+                <p class="content-type-item-text hover-primary-color">Pokémon</p>
+            </li>
+            <li class="content-type-item">
+                <a href="" class="content-type-item-link">
+                    <img src="~/Asset/Image/brand_7.jpg" alt="Hollow Knight" class="content-type-item-img">
+                </a>
+                <p class="content-type-item-text hover-primary-color">Hollow Knight</p>
+            </li>
+            <li class="content-type-item">
+                <a href="" class="content-type-item-link">
+                    <img src="~/Asset/Image/brand_8.jpg" alt="Animal Crossing" class="content-type-item-img">
+                </a>
+                <p class="content-type-item-text hover-primary-color">Animal Crossing</p>
+            </li>
+        </ul>
+    </div>
+    <!--New Shirt  -->
+    <div class="new-shirt">
+        <a class="new-shirt-content hover-primary-color">Những mẫu áo mới nhất</a>
+        
+        <div class="grid-row">
+
+            @Html.Action("Pa_Item")
+
+
+        </div>
+        <div class="new-shirt-full">
+            <a href="" class="new-shirt-full-text">
+                Xem tất cả
+                <i class="ti-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- Banner -->
+    <div class="content-banner">
+        <a href="./sale.html" class="content-banner-link">
+            <div class=""> 
+                <img src="../../../../Asset/Image/banner.jpg" alt="Quảng cáo áo Wibu" class="wibu-banner-img">
+            </div>
+        </a>
+
+    </div>
+
+    <div class="random-sale">
+        <div class="random-sale-padding">
+            <div class="random-sale-title">
+                <a href="" class="random-sale-big-text hover-primary-color">Random Sale</a>
+                <p class="random-sale-small-text">Chương trình đã kết thúc</p>
+            </div>
+
+            <div class="grid-row ">
+
+                @Html.Action("Pa_Itemsale", "Home");
+            </div>
+
+            <div class="new-shirt-full">
+                <a href="" class="new-shirt-full-text">
+                    Xem tất cả
+                    <i class="ti-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wibu shirt -->
+    <div class="wibu-shirt float-clear">
+        <a href="./wibu.html" class="wibu-shirt-text hover-primary-color">Áo Wibu</a>
+        <div class="grid-row wibu-shirt-list   ">
+
+            @Html.Action("Pa_Itemwibu", "Home");
+
+            <div class="wibu-banner">
+                <a href="./wibu.html" class="wibu-banner-link">
+                    <img src="../../../../Asset/Image/wibu_banner.jpg" alt="Quảng cáo áo Wibu" class="wibu-banner-img">
+                    
+                </a>
+            </div>
+        </div>
+        <div class="new-shirt-full wibu-shirt-all">
+            <a href="" class="new-shirt-full-text">
+                Xem tất cả
+                <i class="ti-angle-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Game Shirt -->
+    <div class="game-shirt">
+        <a href="./cyberpunk.html" class="wibu-shirt-text hover-primary-color">Áo Game</a>
+        <div class="grid-row game-shirt-list">
+            <div class="game-banner">
+                <a href="./cyberpunk.html" class="game-banner-link">
+                    <img src="../../../../Asset/Image/game_shirt_banner.jpg" alt="Quảng cáo áo game" class="game-banner-img">
+                </a>
+            </div>
+
+            @Html.Action("Pa_Itemgame", "Home")
+
+
+        </div>
+
+        <div class="new-shirt-full wibu-shirt-all">
+            <a href="" class="new-shirt-full-text">
+                Xem tất cả
+                <i class="ti-angle-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Banner Home -->
+    <div class="banner-home">
+        <div class="grid-row banner-home-list">
+            <div class="grid__column-3 banner-home-item">
+                <a href="" class="banner-home-link">
+                    <img src="../../../../Asset/Image/banner_coll_1.jpg" alt="" class="banner-home-img">
+                </a>
+            </div>
+
+            <div class="grid__column-3 banner-home-item">
+                <a href="" class="banner-home-link">
+                    <img src="../../../../Asset/Image/banner_coll_2.jpg" alt="" class="banner-home-img">
+                </a>
+            </div>
+
+            <div class="grid__column-3 banner-home-item">
+                <a href="" class="banner-home-link">
+                    <img src="../../../../Asset/Image/banner_coll_3.jpg" alt="" class="banner-home-img">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The HP Shirt -->
+    <div class="HP-shirt">
+        <div class="Hp-shirt-title">
+            <a href="" class="wibu-shirt-text hover-primary-color">Áo Game</a>
+            <ul class="Hp-shirt-title-list">
+                <li class="Hp-shirt-item Hp-shirt-item-active">
+                    <a href="" class="Hp-shirt-item-link Hp-shirt-item-active">Áo dài tay</a>
+                </li>
+                <li class="Hp-shirt-item">
+                    <a href="" class="Hp-shirt-item-link">Sweater</a>
+                </li>
+                <li class="Hp-shirt-item">
+                    <a href="" class="Hp-shirt-item-link">Hoodie</a>
+                </li>
+            </ul>
+        </div>
+        <div class="grid-row">
+            <div class="grid__column-5 new-shirt-list">
+                <div href="" alt="Áo thun dài tay Snorlax Đừng Làm Phiền" class="new-shirt-item">
+                    <div class="new-shirt-item-img" style="background-image: url('../../../../Asset/Image/banner1.jpg');">
+                        <span class="new-shirt-search">
+                            <i class="ti-search js-product-details"></i>
+                        </span>
+                    </div>
+                    <div class="new-shirt-item__price">
+                        <h4 class="new-shirt-item-name hover-primary-color">Áo thun dài tay Snorlax Đừng Làm Phiền</h4>
+                        <span class="new-shirt-item__price-current">280,000đ</span>
+                        <span class="new-shirt-item__price-old">320,000đ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__column-5 new-shirt-list">
+                <div href="" alt="Áo thun dài tay Dark Souls 3-Soul of Cinder" class="new-shirt-item">
+                    <div class="new-shirt-item-img" style="background-image: url('../../../../Asset/Image/banner2.jpg');">
+                        <span class="new-shirt-search">
+                            <i class="ti-search js-product-details"></i>
+                        </span>
+                    </div>
+                    <div class="new-shirt-item__price">
+                        <h4 class="new-shirt-item-name hover-primary-color">Áo thun dài tay Dark Souls 3-Soul of Cinder</h4>
+                        <span class="new-shirt-item__price-current">280,000đ</span>
+                        <span class="new-shirt-item__price-old">320,000đ</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid__column-5 new-shirt-list">
+                <div href="" alt="Áo thun dài tay Yasuo & Yone" class="new-shirt-item">
+                    <div class="new-shirt-item-img" style="background-image: url('../../../../Asset/Image/banner3.jpg');">
+                        <span class="new-shirt-search">
+                            <i class="ti-search js-product-details"></i>
+                        </span>
+                    </div>
+                    <div class="new-shirt-item__price">
+                        <h4 class="new-shirt-item-name hover-primary-color">Áo thun dài tay Yasuo & Yone</h4>
+                        <span class="new-shirt-item__price-current">280,000đ</span>
+                        <span class="new-shirt-item__price-old">320,000đ</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid__column-5 new-shirt-list">
+                <div href="" alt="Áo thun dài tay Dark Souls-Game Là Dễ" class="new-shirt-item">
+                    <div class="new-shirt-item-img" style="background-image: url('../../../../Asset/Image/banner4.jpg');">
+                        <span class="new-shirt-search">
+                            <i class="ti-search js-product-details"></i>
+                        </span>
+                    </div>
+                    <div class="new-shirt-item__price">
+                        <h4 class="new-shirt-item-name hover-primary-color">Áo thun dài tay Dark Souls-Game Là Dễ</h4>
+                        <span class="new-shirt-item__price-current">280,000đ</span>
+                        <span class="new-shirt-item__price-old">320,000đ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__column-5 new-shirt-list">
+                <div href="" alt="Áo thun dài tay Chạy đi T-Rex" class="new-shirt-item">
+                    <div class="new-shirt-item-img" style="background-image: url('../../../../Asset/Image/banner5.jpg');">
+                        <span class="new-shirt-search">
+                            <i class="ti-search js-product-details"></i>
+                        </span>
+                    </div>
+                    <div class="new-shirt-item__price">
+                        <h4 class="new-shirt-item-name hover-primary-color">Áo thun dài tay Chạy đi T-Rex</h4>
+                        <span class="new-shirt-item__price-current">280,000đ</span>
+                        <span class="new-shirt-item__price-old">320,000đ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="new-shirt-full wibu-shirt-all">
+            <a href="" class="new-shirt-full-text">
+                Xem tất cả
+                <i class="ti-angle-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal layout -->
+@*<div class="modal1 js-modal">
+    <div class="modal1-container js-modal-container">
+        <i class="modal-icon-close ti-close js-modal-close"></i>
+        <div class="modal__img">
+            <div id="main-img">
+                <img src="../../../../Asset/Image/modalimg.jpg" alt="Áo thun Assassin's Creed Valhalla " id="modal__img-big">
+            </div>
+
+            <ul class="modal__img-list">
+                <li><img class="modal__img-small" src="../../../../Asset/Image/modalimg.jpg" alt="Áo thun Assassin's Creed Valhalla" onclick="changeImage('one')" id="one"></li>
+                <li><img class="modal__img-small" src="../../../../Asset/Image/modal-img-white.jpg" alt="Áo thun Assassin's Creed Valhalla" onclick="changeImage('two')" id="two"></li>
+            </ul>
+            <script src="~/Areas/js/img.js"></script>
+        </div>
+
+        <div class="modal__content">
+            <h3 class="modal__content-title">Áo thun Assassin's Creed Valhalla</h3>
+            <p class="modal__content-trademark">
+                Thương hiệu: <span href="" style="color:var(--primary-color);">Next Level</span> |
+                Mã sản phẩm: <span href="" style="color:var(--primary-color);">Đang cập nhật</span>
+            </p>
+
+            <div class="modal__price">
+                <div class="modal__price_new">250.000đ</div>
+                <div class="modal__price_old">300.000đ</div>
+            </div>
+
+            <div class="modal-size">
+                <ul class="modal-size-list">
+                    <li class="modal-size-title">Kích thước:</li>
+                    <li class="modal-size-item">S</li>
+                    <li class="modal-size-item">M</li>
+                    <li class="modal-size-item">L</li>
+                    <li class="modal-size-item">XL</li>
+                    <li class="modal-size-item modal-size-active">XXL</li>
+                    <li class="modal-size-item">3XL</li>
+                    <li class="modal-size-item">4XL</li>
+                    <li class="modal-size-item">5XL</li>
+                </ul>
+            </div>
+
+            <div class="modal__shirt-color">
+                <h3 class="modal__shirt-color-title">Màu sắc:</h3>
+                <div class="modal__shirt-color-black modal__shirt-color-active"></div>
+                <div class="modal__shirt-color-white"></div>
+            </div>
+
+            <div class="modal-reduce">
+                <h3 class="modal-reduce-text">Số Lượng:</h3>
+                <input aria-label="quantity" class="input-qty" max="999" min="1" name="" type="number" value="1">
+            </div>
+
+            <div class="modal__add-cart">
+                <input type="button" value="Thêm vào giỏ hàng" id="btn-modal-add">
+                <script language="javascript">
+                    var button = document.getElementById("btn-modal-add");
+                    button.onclick = function () {
+                        swal("Xác nhận!", "Thêm sản phẩm thành công");
+                    }
+                </script>
+            </div>
+        </div>
+
+    </div>
+</div>*@
+
+@*header-navbar-help-user*@
+
+@*@if (@Session["userName"] != null)
+{
+    <div class="header-navbar-user">
+        <a href="#"><i class="fa fa-user"></i>@Session["userName"]</a>
+        <a href="~/User/Login/Logout>Đăng xuất</a>
+
+    </div>
+}
+else
+{
+    <div class="header-navbar-user">
+        <a href="~/User/Login/Index"><i class="fa fa-user"></i>Login</a>
+    </div>
+}*@
+
+
+
+
+<!-- JS open/close modal -->
+<script>
+    const buyBtns = document.querySelectorAll('.js-product-details')
+    const modal = document.querySelector('.js-modal')
+    const modalClose = document.querySelector('.js-modal-close')
+    const modalContainer = document.querySelector('.js-modal-container')
+
+    // Hàm hiển thị modal chi tiết sp (thêm class open vào modal1)
+    function showProductDetails() {
+        modal.classList.add('open')
+    }
+
+    // Hàm ẩn modal chi tiết sp (gỡ bỏ class open vào modal1)
+    function hideProductDetails() {
+        modal.classList.remove('open')
+    }
+
+    //Lặp qua từng thẻ div và nghe hành vi click
+    for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener('click', showProductDetails)
+    }
+
+    // Nghe hành vi click vào div close
+    modalClose.addEventListener('click', hideProductDetails)
+    modal.addEventListener('click', hideProductDetails)
+    modalContainer.addEventListener('click', function (event) {
+        event.stopPropagation()
+    })
+</script>
+
+<!--Back top  -->
+<div id="backtop">
+    <i class="ti-angle-up backtop-icon"></i>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop()) {
+                $('#backtop').fadeIn();
+            } else {
+                $('#backtop').fadeOut();
+            }
+        });
+        $('#backtop').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        });
+    });
+</script>
+
+<!-- Alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+

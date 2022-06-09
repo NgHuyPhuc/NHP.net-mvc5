@@ -1,0 +1,72 @@
+.content-contact-mini-title{
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.content-contact-mini-title a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.content-form-login{
+    margin-top: 24px;
+}
+
+.form-login-title{
+    text-align: center;
+    width: 50%;
+    transform: translateX(50%);
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.form-login-text{
+    text-align: start;
+    margin: 0;
+    padding: 10px 0;
+    cursor: default;
+}
+
+.form-login-text span{
+    color: red;
+}
+
+.form-login-input{
+    width: 100%;
+    padding: 10px;
+    outline-color: var(--primary-color);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.forgot-password{
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.forgot-password a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.login{
+    text-align: center;
+    width: 50%;
+    transform: translateX(50%);
+    margin-top: 20px;
+}
+
+.login-text{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px 8px;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-text:hover{
+    opacity: 0.9;
+}

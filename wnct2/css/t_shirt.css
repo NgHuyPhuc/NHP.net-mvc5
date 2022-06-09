@@ -1,0 +1,141 @@
+.content-product{
+    
+}
+
+.category{
+    padding: 8px 8px 0 8px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 2px #eee;
+    padding-bottom: 16px;
+}
+
+.category-heading{
+    margin-top: 12px;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.category-list{
+    margin-top: 16px;
+    font-size: 1.5rem;
+    padding-bottom: 12px;
+}
+
+.category-input{
+    margin: 8px;
+    transform: scale(1.4);
+}
+
+/* Product care */
+.product care{
+    margin-top: 24px;
+}
+
+.product-title{
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.product-title h3{
+    font-size: 1.6rem;
+    color: var(--white-color);
+    padding: 8px;
+    cursor: pointer;
+}
+
+.product-care-hot{
+    display: flex;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 8px 0;
+}
+
+.product-care-hot:hover{
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-care-hot-img{
+    width: 92px;
+    height: 92px;
+}
+
+.product-care-profile{
+    margin: 0 8px;
+}
+
+.product-care-name{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 10px ;
+    cursor: pointer;
+}
+
+.product-care-price{
+    display: flex;
+
+}
+.product-care-new-price{
+    margin: 0;
+    font-size: 1.3rem;
+    color: red;
+    margin-right: 8px;
+    line-height: 1.3rem;
+    font-weight: 600;
+}
+.product-care-old-price{
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-decoration: line-through;
+}
+
+/* Column 10 */
+.product-main{
+    padding: 8px 16px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 2px #eee;
+}
+
+.home-filter{
+    /* padding: 8px 16px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 2px #eee;
+    padding-bottom: 16px;  */
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.home-filter-title{
+    font-size: 2.8rem;
+    color: var(--text-color);
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.home-filter__label{
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.Home-filter__btn{
+    font-size: 1.6rem;
+    color: #969696;
+    padding: 10px 12px;
+    border: none;
+    background-color: var(--white-color);
+    cursor: pointer;
+    margin-top: -2px ;
+}
+
+.home-filter-icon{
+    font-size: 1.4rem;
+}
+
+.Home-filter__btn:hover{
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}

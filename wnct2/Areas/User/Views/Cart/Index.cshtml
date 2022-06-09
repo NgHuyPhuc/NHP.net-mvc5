@@ -1,0 +1,129 @@
+﻿@using wnct2.Models.Framework
+
+@model List<itemcart>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="header-menu float-clear" style="height: 54px; align-items: center;">
+        <div class="grid">
+            <div class="header-menu-main">
+                <ul class="header-menu-list">
+                    <li class="header-menu-item">
+                        <a href="~/User/Home/Index" class="header-menu-item-link" style="padding: 12px 12px 20px;">Trang chủ</a>
+                    </li>
+                    <li class="header-menu-item menu-item-main">
+                        <a href="~/User/Product/Index" class="header-menu-item-link" style="padding: 12px 12px 20px;">
+                            Sản phẩm
+                            <i class="ti-angle-down">
+                            </i>
+                        </a>
+                        <ul class="menu-list-item">
+                            <li><a href="./t_shirt.html" style="color: var(--text-color);">T-Shirt</a></li>
+                            <li><a href="./aotaydai.html" style="color: var(--text-color);">Áo dài tay</a></li>
+                            <li><a href="./sweater.html" style="color: var(--text-color);">Sweater</a></li>
+                            <li><a href="./hoodie.html" style="color: var(--text-color);">Hoodie</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item menu-item-main">
+                        <a href="" class="header-menu-item-link " style="padding: 12px 12px 20px;">
+                            Bộ sưu tập
+                            <i class="ti-angle-down"></i>
+                        </a>
+                        <ul class="menu-list-item ">
+                            <li><a href="./wibu.html" style="color: var(--text-color);">Wibu</a></li>
+                            <li><a href="./pokemon.html" style="color: var(--text-color);">Pokemon</a></li>
+                            <li><a href="./cyberpunk.html" style="color: var(--text-color);">Cyberpunk 2077</a></li>
+                            <li><a href="./lol.html" style="color: var(--text-color);">LoL</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="./sale.html" class="header-menu-item-link" style="padding: 12px 12px 20px;">
+                            Random Sale
+                            <i class="ti-shortcode"></i>
+                        </a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="./lienhe.html" class="header-menu-item-link" style="padding: 12px 12px 20px;">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-row">
+        <div class="grid">
+            <ul class="header-row-list">
+                <li class="header-row-item ">
+                    <a href="./Home.html" class="header-row-link hover-primary-color">
+                        Trang chủ
+                    </a>
+                </li>
+                <li class="header-row-item">
+                    / Giỏ hàng /
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="add__cart-form">
+        <div class="grid">
+            <div class="add__cart-form-product ">
+                <div class="add__cart-form-title">Giỏ hàng</div>
+                <div class="add_cart-form-separate">
+
+                    <div class="add__cart-1">
+                        <ul class="add__form-list">
+                            @foreach (var item in Model)
+                            {
+                                <form method="post" action="@Url.Action("UpdateCart","Cart",new {mahh = item.mahh })">
+                                <li class="add__cart-item">
+                                    <div class="add__cart-img-name">
+                                        <a href="@Url.Action("DeleteCart","Cart",new {mahh = item.mahh })">
+                                            <span class="add__cart-item-delete">Xóa</span>
+                                        </a>
+
+                                        <img src="~/Asset/Image/@item.anh" alt="Áo thun dài tay Pikachu" class="add__cart-item-img">
+                                        <span class="add__cart-item-name hover-primary-color">@item.tenhh</span>
+                                    </div>
+
+                                    
+
+                                    <div class="add__cart-price-quantily">
+                                        <button class="" type="submit" style="margin-right: 30px">
+                                            <img style="width:32px;height:32px;background-color:white;border:none" src="~/Asset/Image/reset.png" />
+                                        </button>
+                                        <span class="add__cart-price">@item.donggia.ToString("#,##") đ</span>
+                                        <input aria-label="quantity" class="input-qty" max="999" min="1" name="soluong" type="number" value="@item.soluong">
+                                    </div>
+                                </li>
+                                </form>
+                            }
+                        </ul>
+                    </div>
+
+                    <div class="add__cart-2">
+
+                        <div class="add__cart-total-money">
+                            <span class="add__cart-total-text">Tổng tiền:</span>
+                            <span class="add__cart-total-price">@ViewBag.tt đ</span>
+                        </div>
+
+                        <a href="~/User/Cart/Checkout" class="add__cart-payment">Tiến hành thanh toán</a>
+
+                        <div class="add__cart-back-home">
+                            <a href="./sanpham.html" class="add__cart-back">
+                                <i class="ti-arrow-left add__cart-back-icon"></i>
+                                Tiếp tục mua hàng
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

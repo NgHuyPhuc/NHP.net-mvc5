@@ -1,0 +1,168 @@
+﻿@model List<wnct2.Models.Framework.Quanao>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="header-menu float-clear" style="height: 54px; align-items: center;">
+        <div class="grid">
+            <div class="header-menu-main">
+                <ul class="header-menu-list">
+                    <li class="header-menu-item">
+                        <a href="~/User/Home/Index" class="header-menu-item-link" style="padding: 15px 12px 20px;">Trang chủ</a>
+                    </li>
+                    <li class="header-menu-item menu-item-main">
+                        <a href="~/User/Product/Index" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                            Sản phẩm
+                            <i class="ti-angle-down">
+                            </i>
+                        </a>
+                        <ul class="menu-list-item" style="z-index: 2; ">
+                            <li><a href="./t_shirt.html" style="color: #000">T-Shirt</a></li>
+                            <li><a href="./aotaydai.html" style="color: #000">Áo dài tay</a></li>
+                            <li><a href="./sweater.html" style="color: #000">Sweater</a></li>
+                            <li><a href="./hoodie.html" style="color: #000">Hoodie</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item menu-item-main">
+                        <a href="" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                            Bộ sưu tập
+                            <i class="ti-angle-down"></i>
+                        </a>
+                        <ul class="menu-list-item ">
+                            <li><a href="./wibu.html" style="color: #000">Wibu</a></li>
+                            <li><a href="./pokemon.html" style="color: #000">Pokemon</a></li>
+                            <li><a href="./cyberpunk.html" style="color: #000">Cyberpunk 2077</a></li>
+                            <li><a href="./lol.html" style="color: #000">LoL</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="./sale.html" class="header-menu-item-link" style="padding: 15px 12px 20px;">
+                            Random Sale
+                            <i class="ti-shortcode"></i>
+                        </a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="./lienhe.html" class="header-menu-item-link" style="padding: 15px 12px 20px;">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-row">
+        <div class="grid">
+            <ul class="header-row-list">
+                <li class="header-row-item ">
+                    <a href="~/User/Home/Index" class="header-row-link hover-primary-color">
+                        Trang chủ
+                    </a>
+                </li>
+                <li class="header-row-item ">
+                    <a href="~/User/Product/Index" class="header-row-link hover-primary-color">
+                        / Danh mục
+                    </a>
+                </li>
+                <li class="header-row-item">
+                    / Chi tiết sản phẩm /
+                </li>
+            </ul>
+        </div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="details__form">
+            <div class="grid">
+                <div class="details__form-product">
+                    <h2 class="details__form-title">Chi tiết sản phẩm</h2>
+                    <div class="modal1-container ">
+                        <div class="modal__img">
+                            <div id="main-img">
+                                <img src="~/Asset/Image/@item.Anh" alt="Áo thun Assassin's Creed Valhalla " id="modal__img-big">
+                            </div>
+
+                            <ul class="modal__img-list">
+                                <l><img class="modal__img-small" src="~/Asset/Image/modalimg.jpg" alt="Áo thun Assassin's Creed Valhalla" onclick="changeImage('one')" id="one"></l>
+                                <l><img class="modal__img-small" src="~/Asset/Image/modal-img-white.jpg" alt="Áo thun Assassin's Creed Valhalla" onclick="changeImage('two')" id="two"></l>
+                            </ul>
+                            <script src="./asset/js/img.js"></script>
+                        </div>
+
+                        <div class="modal__content">
+                            <h3 class="modal__content-title">Áo thun Assassin's Creed Valhalla</h3>
+                            <p class="modal__content-trademark">
+                                Thương hiệu: <span href="" style="color:var(--primary-color);">Next Level</span> |
+                                Mã sản phẩm: <span href="" style="color:var(--primary-color);">Đang cập nhật</span>
+                            </p>
+
+                            <div class="modal__price">
+                                <div class="modal__price_new">@item.DongGia</div>
+                                <div class="modal__price_old">300.000đ</div>
+                            </div>
+
+                            <div class="modal-size">
+                                <ul class="modal-size-list">
+                                    <h3 class="modal-size-title">Kích thước:</h3>
+                                    <li class="modal-size-item">S</li>
+                                    <li class="modal-size-item">M</li>
+                                    <li class="modal-size-item">L</li>
+                                    <li class="modal-size-item">XL</li>
+                                    <li class="modal-size-item modal-size-active">XXL</li>
+                                    <li class="modal-size-item">3XL</li>
+                                    <li class="modal-size-item">4XL</li>
+                                    <li class="modal-size-item">5XL</li>
+                                </ul>
+                            </div>
+
+                            <div class="modal__shirt-color">
+                                <h3 class="modal__shirt-color-title">Màu sắc:</h3>
+                                <div class="modal__shirt-color-black modal__shirt-color-active"></div>
+                                <div class="modal__shirt-color-white"></div>
+                            </div>
+                            <form method="post" action="@Url.Action("AddToCart","Cart",new {mahh=item.Mahh })">
+                                <div class="modal-reduce">
+                                    <h3 class="modal-reduce-text">Số Lượng:</h3>
+                                    <input aria-label="quantity" class="input-qty" max="999" min="1" name="soluong" type="number" value="1">
+                                </div>
+
+                                <div class="modal__add-cart">
+                                    @*<input type="button" value="Thêm vào giỏ hàng" id="btn-modal-add">*@
+
+
+                                    <button type="submit" id="btn-modal-add">
+                                        Thêm vào giỏ hàng
+                                    </button>
+
+                                    <script language="javascript">
+                                        var button = document.getElementById("btn-modal-add");
+                                        button.onclick = function () {
+                                            swal("Xác nhận!", "Thêm sản phẩm thành công");
+                                        }
+                                    </script>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="description">
+            <div class="grid">
+                <div class="description__form">
+                    <h2 class="description__form-title">Mô tả sản phẩm</h2>
+                    <div class="description__form-desc">
+                        <p class="description__form-text">
+                            @item.Mota
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

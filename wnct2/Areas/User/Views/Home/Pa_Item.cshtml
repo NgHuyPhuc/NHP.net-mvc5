@@ -1,0 +1,21 @@
+﻿
+@model List<wnct2.Models.Framework.Quanao>
+@foreach (var item in Model)
+{
+    <div class="grid__column-5 new-shirt-list">
+
+        <a href="~/User/detail/Index?mahh=@item.Mahh" alt="Áo thun Burn It All Down Worlds 2021" class="new-shirt-item">
+            <div class="new-shirt-item-img" style="background-image: url('../../Areas/Asset/FileUpload/@item.Anh'); ">
+                <span class="new-shirt-search">
+                    @*<a href="~/User/detail/Index?mahh=@item.Mahh" class="ti-search "></a>*@
+                    <i class="ti-search"></i>
+                </span>
+            </div>
+            <div class="new-shirt-item__price">
+                <h4 class="new-shirt-item-name hover-primary-color">@item.Tenhh</h4>
+                <span class="new-shirt-item__price-current">@item.DongGia</span>
+                <span class="new-shirt-item__price-old">290,000đ</span>
+            </div>
+        </a>
+    </div>
+}
